@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Love</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to bottom right, #ffe0e9, #ffc3d9);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      padding: 20px;
+    }
+
+    img {
+      max-width: 100%;
+      margin-bottom: 20px;
+      max-height: 300px;
+    }
+
+    form {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 500px;
+      margin-bottom: 30px;
+    }
+
+    input[type="text"], button {
+      padding: 15px;
+      margin: 15px 0;
+      font-size: 18px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #ff80ab;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background-color: #ff4d94;
+    }
+
+    #secretImage {
+      display: none;
+      max-width: 90%;
+      max-height: 500px;
+      margin-top: 20px;
+      transition: all 0.5s ease;
+    }
+
+    #loveMessage {
+      display: none;
+      color: #d63384;
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    #extraMessage {
+      display: none;
+      color: #ff69b4;
+      font-size: 18px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <img src="love.gif" alt="Love GIF">
+
+  <form id="loveForm">
+    <label for="loveDate"><strong>Enter our first love making date (DD:MM:YYYY) 💖</strong></label><br>
+    <input type="text" id="loveDate" required><br>
+    <button type="submit">Reveal the Secret</button>
+  </form>
+
+  <p id="loveMessage">Paravala thava date aaradha</p>
+  <img src="ours.jpg" id="secretImage" alt="Secret Image">
+
+  <p id="extraMessage">Bera ondhu photo kuda illa of us together. Only photo of us together is our snap avatar. Ill forever be by your side holding your hands till the last breathe</p>
+
+  <script>
+    document.getElementById("loveForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const correctDate = "21:05:2024";
+      const enteredDate = document.getElementById("loveDate").value.trim();
+
+      if (enteredDate === correctDate) {
+        document.getElementById("secretImage").style.display = "block";
+        document.getElementById("loveMessage").style.display = "block";
+        document.getElementById("extraMessage").style.display = "block";
+      } else {
+        alert("Fkkoff date kuda arigae 💘");
+      }
+    });
+  </script>
+
+</body>
+</html>
+
